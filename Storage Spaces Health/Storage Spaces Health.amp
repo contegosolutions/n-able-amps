@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><Policy Description="U3RvcmFnZSBTcGFjZXMgSGVhbHRo" ExecutionType="CurrentLoggedOnUser" ID="1ef85f9a-4956-4186-97da-f2946c1cd349" Name="Storage Spaces Health" PS3ObjectCount="0" RemoteCategory="0" Version="2.1.2.19">
+  <Object Data="&lt;xml&gt;&lt;Parameters&gt;&lt;Parameter ParameterName=&quot;StrgPool&quot; Label=&quot;Storage Pool Friendly Name&quot; ParameterType=&quot;string&quot; Value=&quot;&quot; /&gt;&lt;/Parameters&gt;&lt;OutputParameters&gt;&lt;Parameter ParameterName=&quot;VDiskDetails&quot; Label=&quot;Virtual Disk Details&quot; ParameterType=&quot;string&quot; Value=&quot;Run Script.Vitual Disk Details&quot; /&gt;&lt;Parameter ParameterName=&quot;PDiskDetails&quot; Label=&quot;Physical Disk Details&quot; ParameterType=&quot;string&quot; Value=&quot;Run Script.Physical Disk Details&quot; /&gt;&lt;Parameter ParameterName=&quot;StrgPoolHealth&quot; Label=&quot;Storage Pool Health&quot; ParameterType=&quot;string&quot; Value=&quot;Run Script.Storage Pool Health&quot; /&gt;&lt;Parameter ParameterName=&quot;VDiskHealth&quot; Label=&quot;Virtual Disk Health&quot; ParameterType=&quot;string&quot; Value=&quot;Run Script.Virtual Disk Health&quot; /&gt;&lt;Parameter ParameterName=&quot;PDiskHealth&quot; Label=&quot;Physical Disk Health&quot; ParameterType=&quot;string&quot; Value=&quot;Run Script.Physical Disk Health&quot; /&gt;&lt;/OutputParameters&gt;&lt;/xml&gt;" ID="{8ed0b454-f03a-4df6-be1c-22bb92346b48}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}"/>
+  <LinkManager xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>1e16f9b6-4e24-463a-839d-8bfc8dbfff7d.vdisk_details</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3/>
+        <d2p1:m_Item4>VDiskDetails</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>1e16f9b6-4e24-463a-839d-8bfc8dbfff7d.pdisk_details</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3/>
+        <d2p1:m_Item4>PDiskDetails</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>1e16f9b6-4e24-463a-839d-8bfc8dbfff7d.strg_pool_health</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3/>
+        <d2p1:m_Item4>StrgPoolHealth</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>1e16f9b6-4e24-463a-839d-8bfc8dbfff7d.vdisk_health</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3/>
+        <d2p1:m_Item4>VDiskHealth</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>1e16f9b6-4e24-463a-839d-8bfc8dbfff7d.pdisk_health</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3/>
+        <d2p1:m_Item4>PDiskHealth</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+    </hashset>
+  </LinkManager>
+  <Activity xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" mc:Ignorable="sads sap" x:Class="Policy Builder">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)"/>
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>504,745</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <p:PolicySequence DisplayName="Policy Builder" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" sap:VirtualizedContainerService.HintSize="504,745">
+      <p:PolicySequence.Activities>
+        <p:RunScript AssemblyName="PolicyExecutionEngine, Version=1.7.2.53, Culture=neutral, PublicKeyToken=null" DisplayName="Run Script" Moniker="1e16f9b6-4e24-463a-839d-8bfc8dbfff7d" OutPut_64="[RunScript_OutPut_64]" Result="[RunScript_Result]" ResultString="[RunScript_ResultString_55]" Results_x64="[RunScript_Results_x64]" RunAsCurrentLoggedOnUser="True" ScriptExecutionMethod="ExecuteDebug" TypeName="RunScript" genArgEvent="f74b8e27-4518-4a0a-b90a-0e6c593b0dc4" m_bTextLinkChange="False" sap:VirtualizedContainerService.HintSize="468,522" script="JHN0cmdfcG9vbCA9ICQlaWQlc3RyZ19wb29sJWlkJQ0KDQokc3RyZ19wb29sX2hlYWx0aCA9ICJVbmtub3duIg0KDQokdmRpc2tfaGVhbHRoID0gIlVua25vd24iDQokdmRpc2tfd2Fybl9jb3VudCA9IDANCiR2ZGlza19jcml0X2NvdW50ID0gMA0KJHZkaXNrX2RldGFpbHMgPSAiIg0KDQokcGRpc2tfaGVhbHRoID0gIlVua25vd24iDQokcGRpc2tfd2Fybl9jb3VudCA9IDANCiRwZGlza19jcml0X2NvdW50ID0gMA0KJHBkaXNrX2RldGFpbHMgPSAiIg0KDQp0cnkgew0KCWltcG9ydC1tb2R1bGUgc3RvcmFnZTsNCgkkc3RyZ19wb29sX3JlcyA9IEdldC1TdG9yYWdlUG9vbCAtRnJpZW5kbHlOYW1lICRzdHJnX3Bvb2wNCiAgICAkc3RyZ19wb29sX2hlYWx0aCA9ICRzdHJnX3Bvb2xfcmVzLkhlYWx0aFN0YXR1cw0KDQogICAgJHZkaXNrX3dhcm5fcmVzID0gQChHZXQtVmlydHVhbERpc2sgLVN0b3JhZ2VQb29sICRzdHJnX3Bvb2xfcmVzIC1IZWFsdGhTdGF0dXMgVW5rbm93bixXYXJuaW5nIC1FcnJvckFjdGlvbiBTaWxlbnRseUNvbnRpbnVlIHxTZWxlY3QtT2JqZWN0IEZyaWVuZGx5TmFtZSxIZWFsdGhTdGF0dXMsT3BlcmF0aW9uYWxTdGF0dXMsRGV0YWNoZWRSZWFzb24pDQogICAgJHZkaXNrX3dhcm5fY291bnQgPSAkdmRpc2tfd2Fybl9yZXMuTGVuZ3RoDQogICAgJHZkaXNrX2NyaXRfcmVzID0gQChHZXQtVmlydHVhbERpc2sgLVN0b3JhZ2VQb29sICRzdHJnX3Bvb2xfcmVzIC1IZWFsdGhTdGF0dXMgVW5oZWFsdGh5IC1FcnJvckFjdGlvbiBTaWxlbnRseUNvbnRpbnVlIHxTZWxlY3QtT2JqZWN0IEZyaWVuZGx5TmFtZSxIZWFsdGhTdGF0dXMsT3BlcmF0aW9uYWxTdGF0dXMsRGV0YWNoZWRSZWFzb24pDQogICAgJHZkaXNrX2NyaXRfY291bnQgPSAkdmRpc2tfY3JpdF9yZXMuTGVuZ3RoDQoNCiAgICAkdmRpc2tfaGVhbHRoID0gIkhlYWx0aHkiDQogICAgaWYoJHZkaXNrX3dhcm5fY291bnQgLWd0IDApeyAkdmRpc2tfaGVhbHRoID0gIldhcm5pbmciIH0NCiAgICBpZigkdmRpc2tfY3JpdF9jb3VudCAtZ3QgMCl7ICR2ZGlza19oZWFsdGggPSAiVW5oZWFsdGh5IiB9DQogICAgaWYoICR2ZGlza193YXJuX2NvdW50IC1ndCAwIC1vciAkdmRpc2tfY3JpdF9jb3VudCAtZ3QgMCApew0KICAgICAgICAkdmRpc2tfZGV0YWlscyArPSBDb252ZXJ0VG8tSnNvbiAtSW5wdXRPYmplY3QgJHZkaXNrX3dhcm5fcmVzDQogICAgICAgICR2ZGlza19kZXRhaWxzICs9IENvbnZlcnRUby1Kc29uIC1JbnB1dE9iamVjdCAkdmRpc2tfY3JpdF9yZXMNCiAgICB9ZWxzZXsNCiAgICAgICAgJHZkaXNrX2RldGFpbHMgPSAiSGVhbHRoeSINCiAgICB9DQoNCiAgICAkcGRpc2tfd2Fybl9yZXMgPSBAKEdldC1QaHlzaWNhbERpc2sgLVN0b3JhZ2VQb29sICRzdHJnX3Bvb2xfcmVzIC1IZWFsdGhTdGF0dXMgVW5rbm93bixXYXJuaW5nIC1FcnJvckFjdGlvbiBTaWxlbnRseUNvbnRpbnVlIHxTZWxlY3QtT2JqZWN0IEZyaWVuZGx5TmFtZSxIZWFsdGhTdGF0dXMsRW5jbG9zdXJlTnVtYmVyLFNsb3ROdW1iZXIsTWFudWZhY3R1cmVyLE1vZGVsLFNlcmlhbE51bWJlcikNCiAgICAkcGRpc2tfd2Fybl9jb3VudCA9ICRwZGlza193YXJuX3Jlcy5MZW5ndGgNCiAgICAkcGRpc2tfY3JpdF9yZXMgPSBAKEdldC1QaHlzaWNhbERpc2sgLVN0b3JhZ2VQb29sICRzdHJnX3Bvb2xfcmVzIC1IZWFsdGhTdGF0dXMgVW5oZWFsdGh5IC1FcnJvckFjdGlvbiBTaWxlbnRseUNvbnRpbnVlIHxTZWxlY3QtT2JqZWN0IEZyaWVuZGx5TmFtZSxIZWFsdGhTdGF0dXMsRW5jbG9zdXJlTnVtYmVyLFNsb3ROdW1iZXIsTWFudWZhY3R1cmVyLE1vZGVsLFNlcmlhbE51bWJlcikNCiAgICAkcGRpc2tfY3JpdF9jb3VudCA9ICRwZGlza19jcml0X3Jlcy5MZW5ndGgNCg0KICAgICRwZGlza19oZWFsdGggPSAiSGVhbHRoeSINCiAgICBpZigkcGRpc2tfd2Fybl9jb3VudCAtZ3QgMCl7ICRwZGlza19oZWFsdGggPSAiV2FybmluZyIgfQ0KICAgIGlmKCRwZGlza19jcml0X2NvdW50IC1ndCAwKXsgJHBkaXNrX2hlYWx0aCA9ICJVbmhlYWx0aHkiIH0NCiAgICBpZiggJHBkaXNrX3dhcm5fY291bnQgLWd0IDAgLW9yICRwZGlza19jcml0X2NvdW50IC1ndCAwICl7DQogICAgICAgICRwZGlza19kZXRhaWxzICs9IENvbnZlcnRUby1Kc29uIC1JbnB1dE9iamVjdCAkcGRpc2tfd2Fybl9yZXMNCiAgICAgICAgJHBkaXNrX2RldGFpbHMgKz0gQ29udmVydFRvLUpzb24gLUlucHV0T2JqZWN0ICRwZGlza19jcml0X3Jlcw0KICAgIH1lbHNlew0KICAgICAgICAkcGRpc2tfZGV0YWlscyA9ICJIZWFsdGh5Ig0KICAgIH0NCg0KfWNhdGNoew0KCVdyaXRlLUVycm9yICQoJEVycm9yWzBdKTsNCglleGl0IDE7DQp9DQoNCiQlaWQlc3RyZ19wb29sX2hlYWx0aCVpZCUgPSAkc3RyZ19wb29sX2hlYWx0aA0KJCVpZCV2ZGlza19oZWFsdGglaWQlID0gJHZkaXNrX2hlYWx0aA0KJCVpZCV2ZGlza19kZXRhaWxzJWlkJSA9ICR2ZGlza19kZXRhaWxzDQokJWlkJXBkaXNrX2hlYWx0aCVpZCUgPSAkcGRpc2tfaGVhbHRoDQokJWlkJXBkaXNrX2RldGFpbHMlaWQlID0gJHBkaXNrX2RldGFpbHM=">
+          <p:RunScript.InArgs>
+            <p:InArg ArgType="string" DisplayArg="Input Parameters.Storage Pool Friendly Name" DisplayName="Storage Pool" ItemProp="{x:Null}" Name="strg_pool" isRequired="True" x:Key="strg_pool">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:String">[StrgPool]</InArgument>
+              </p:InArg.Arg>
+              <p:InArg.Item>
+                <InArgument x:TypeArguments="x:Object"/>
+              </p:InArg.Item>
+            </p:InArg>
+          </p:RunScript.InArgs>
+          <p:RunScript.OutArgs>
+            <p:OutArg ArgType="string" DisplayName="Vitual Disk Details" Name="vdisk_details" x:Key="vdisk_details">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunScript_vdisk_details]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg ArgType="string" DisplayName="Virtual Disk Health" Name="vdisk_health" x:Key="vdisk_health">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunScript_vdisk_health]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg ArgType="string" DisplayName="Storage Pool Health" Name="strg_pool_health" x:Key="strg_pool_health">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunScript_strg_pool_health]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg ArgType="string" DisplayName="Physical Disk Details" Name="pdisk_details" x:Key="pdisk_details">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunScript_pdisk_details]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg ArgType="string" DisplayName="Physical Disk Health" Name="pdisk_health" x:Key="pdisk_health">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunScript_pdisk_health]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+          </p:RunScript.OutArgs>
+        </p:RunScript>
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable Name="RunScript_ResultString_55" x:TypeArguments="x:String"/>
+        <Variable Name="RunScript_OutPut_64" x:TypeArguments="x:String"/>
+        <Variable Name="RunScript_Results_x64" x:TypeArguments="scg:IEnumerable(x:Object)"/>
+        <Variable Name="RunScript_Result" x:TypeArguments="x:Double"/>
+        <Variable Name="RunScript_strg_pool_health" x:TypeArguments="x:String"/>
+        <Variable Name="RunScript_vdisk_health" x:TypeArguments="x:String"/>
+        <Variable Name="RunScript_vdisk_details" x:TypeArguments="x:String"/>
+        <Variable Name="RunScript_pdisk_details" x:TypeArguments="x:String"/>
+        <Variable Name="RunScript_pdisk_health" x:TypeArguments="x:String"/>
+        <Variable Name="StrgPool" x:TypeArguments="x:String"/>
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>

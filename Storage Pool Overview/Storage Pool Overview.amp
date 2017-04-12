@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="abcea461-f5a6-43b7-ae65-a5b07334b9db" Name="Storage Pool Overview" Description="U3VtbWFyeSBvZiBzdG9yYWdlIHBvb2wgaGVhbHRoLg==" Version="2.1.2.19" RemoteCategory="0" ExecutionType="Local" PS3ObjectCount="0">
+  <Object ID="{be29fc1e-a610-4f0a-8dc1-7a157a18a094}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml&gt;&lt;OutputParameters&gt;&lt;Parameter ParameterName=&quot;StrgPoolCount&quot; Label=&quot;Storage Pool Count&quot; ParameterType=&quot;number&quot; Value=&quot;Run PowerShell Script.Storage Pool Count&quot; /&gt;&lt;Parameter ParameterName=&quot;StrgPoolNames&quot; Label=&quot;Storage Pool Names&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.Storage Pool Names&quot; /&gt;&lt;Parameter ParameterName=&quot;StrgPoolHealth&quot; Label=&quot;Storage Pool Health&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.Storage Pool Health&quot; /&gt;&lt;Parameter ParameterName=&quot;StrgPoolUnhealthyCount&quot; Label=&quot;Storage Pool Unhealthy Count&quot; ParameterType=&quot;number&quot; Value=&quot;Run PowerShell Script.Storage Pool Unhealthy Count&quot; /&gt;&lt;/OutputParameters&gt;&lt;/xml&gt;" />
+  <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>b2287de3-4fac-4054-bb11-ae6a35209814.strg_pool_count</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>StrgPoolCount</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>b2287de3-4fac-4054-bb11-ae6a35209814.strg_pool_names</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>StrgPoolNames</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>b2287de3-4fac-4054-bb11-ae6a35209814.strg_pool_health</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>StrgPoolHealth</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>b2287de3-4fac-4054-bb11-ae6a35209814.strg_pool_unhealthy_count</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>StrgPoolUnhealthyCount</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+    </hashset>
+  </LinkManager>
+  <Activity mc:Ignorable="sap sads" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>490,571</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <p:PolicySequence DisplayName="Policy Builder" sap:VirtualizedContainerService.HintSize="490,571" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <p:PolicySequence.Activities>
+        <p:RunPowerShellScript AssemblyName="PolicyExecutionEngine, Version=2.1.2.19, Culture=neutral, PublicKeyToken=null" DisplayName="Run PowerShell Script" sap:VirtualizedContainerService.HintSize="454,348" Moniker="b2287de3-4fac-4054-bb11-ae6a35209814" OutPut_64="[RunPowerShellScript_OutPut_64]" Result="[RunPowerShellScript_Result]" ResultString="[RunPowerShellScript_ResultString]" Results_x64="[RunPowerShellScript_Results_x64]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="RunPowerShellScript" genArgEvent="7e76126a-0308-42e0-80a3-1f1928549a23" m_bTextLinkChange="False" script="JABzAHQAcgBnAF8AcABvAG8AbABfAGMAbwB1AG4AdAAgAD0AIAAwAA0ACgAkAHMAdAByAGcAXwBwAG8AbwBsAF8AbgBhAG0AZQBzACAAPQAgACIATgBvACAAcwB0AG8AcgBhAGcAZQAgAHAAbwBvAGwAcwAgAGYAbwB1AG4AZAAiAA0ACgAkAHMAdAByAGcAXwBwAG8AbwBsAF8AaABlAGEAbAB0AGgAIAA9ACAAIgBVAG4AawBuAG8AdwBuACIADQAKACQAcwB0AHIAZwBfAHAAbwBvAGwAXwB1AG4AaABlAGEAbAB0AGgAeQBfAGMAbwB1AG4AdAAgAD0AIAAwAA0ACgANAAoAdAByAHkAIAB7AA0ACgAJAGkAbQBwAG8AcgB0AC0AbQBvAGQAdQBsAGUAIABzAHQAbwByAGEAZwBlADsADQAKAAkAJABzAHQAcgBnAF8AcABvAG8AbABfAHIAZQBzACAAPQAgAEAAKABHAGUAdAAtAFMAdABvAHIAYQBnAGUAUABvAG8AbAAgAC0ASQBzAFAAcgBpAG0AbwByAGQAaQBhAGwAIAAkAGYAYQBsAHMAZQAgAC0ARQByAHIAbwByAEEAYwB0AGkAbwBuACAAUwBpAGwAZQBuAHQAbAB5AEMAbwBuAHQAaQBuAHUAZQApAA0ACgAgACAAIAAgACQAcwB0AHIAZwBfAHAAbwBvAGwAXwBvAGsAXwByAGUAcwAgAD0AIABAACgARwBlAHQALQBTAHQAbwByAGEAZwBlAFAAbwBvAGwAIAAtAEkAcwBQAHIAaQBtAG8AcgBkAGkAYQBsACAAJABmAGEAbABzAGUAIAAtAEgAZQBhAGwAdABoAFMAdABhAHQAdQBzACAASABlAGEAbAB0AGgAeQAgAC0ARQByAHIAbwByAEEAYwB0AGkAbwBuACAAUwBpAGwAZQBuAHQAbAB5AEMAbwBuAHQAaQBuAHUAZQApAA0ACgAgACAAIAAgACQAcwB0AHIAZwBfAHAAbwBvAGwAXwB3AGEAcgBuAF8AcgBlAHMAIAA9ACAAQAAoAEcAZQB0AC0AUwB0AG8AcgBhAGcAZQBQAG8AbwBsACAALQBJAHMAUAByAGkAbQBvAHIAZABpAGEAbAAgACQAZgBhAGwAcwBlACAALQBIAGUAYQBsAHQAaABTAHQAYQB0AHUAcwAgAFUAbgBrAG4AbwB3AG4ALABXAGEAcgBuAGkAbgBnACAALQBFAHIAcgBvAHIAQQBjAHQAaQBvAG4AIABTAGkAbABlAG4AdABsAHkAQwBvAG4AdABpAG4AdQBlACkADQAKACAAIAAgACAAJABzAHQAcgBnAF8AcABvAG8AbABfAGMAcgBpAHQAXwByAGUAcwAgAD0AIABAACgARwBlAHQALQBTAHQAbwByAGEAZwBlAFAAbwBvAGwAIAAtAEkAcwBQAHIAaQBtAG8AcgBkAGkAYQBsACAAJABmAGEAbABzAGUAIAAtAEgAZQBhAGwAdABoAFMAdABhAHQAdQBzACAAVQBuAGgAZQBhAGwAdABoAHkAIAAtAEUAcgByAG8AcgBBAGMAdABpAG8AbgAgAFMAaQBsAGUAbgB0AGwAeQBDAG8AbgB0AGkAbgB1AGUAKQANAAoAIAAgACAAIAAkAHMAdAByAGcAXwBwAG8AbwBsAF8AYwBvAHUAbgB0ACAAPQAgACQAcwB0AHIAZwBfAHAAbwBvAGwAXwByAGUAcwAuAEwAZQBuAGcAdABoAA0ACgAgACAAIAAgAGkAZgAoACAAJABzAHQAcgBnAF8AcABvAG8AbABfAGMAbwB1AG4AdAAgAC0AZwB0ACAAMAAgACkAewANAAoAIAAgACAAIAAgACAAIAAgACQAcwB0AHIAZwBfAHAAbwBvAGwAXwBuAGEAbQBlAHMAIAA9ACAAKAAkAHMAdAByAGcAXwBwAG8AbwBsAF8AcgBlAHMAIAB8ACAAcwBlAGwAZQBjAHQAIAAtAGUAeABwAGEAbgBkACAARgByAGkAZQBuAGQAbAB5AE4AYQBtAGUAKQAgAC0AagBvAGkAbgAgACIALAAiAA0ACgAgACAAIAAgACAAIAAgACAAJABzAHQAcgBnAF8AcABvAG8AbABfAGgAZQBhAGwAdABoACAAPQAgACIASABlAGEAbAB0AGgAeQAiAA0ACgAgACAAIAAgACAAIAAgACAAaQBmACgAIAAkAHMAdAByAGcAXwBwAG8AbwBsAF8AdwBhAHIAbgBfAHIAZQBzAC4ATABlAG4AZwB0AGgAIAAtAGcAdAAgADAAIAApAHsADQAKACAAIAAgACAAIAAgACAAIAAgACAAIAAgACQAcwB0AHIAZwBfAHAAbwBvAGwAXwBoAGUAYQBsAHQAaAAgAD0AIAAiAFcAYQByAG4AaQBuAGcAIgANAAoAIAAgACAAIAAgACAAIAAgAH0ADQAKACAAIAAgACAAIAAgACAAIABpAGYAKAAgACQAcwB0AHIAZwBfAHAAbwBvAGwAXwBjAHIAaQB0AF8AcgBlAHMALgBMAGUAbgBnAHQAaAAgAC0AZwB0ACAAMAAgACkAewANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAJABzAHQAcgBnAF8AcABvAG8AbABfAGgAZQBhAGwAdABoACAAPQAgACIAVQBuAGgAZQBhAGwAdABoAHkAIgANAAoAIAAgACAAIAAgACAAIAAgAH0ADQAKACAAIAAgACAAIAAgACAAIAAkAHMAdAByAGcAXwBwAG8AbwBsAF8AdQBuAGgAZQBhAGwAdABoAHkAXwBjAG8AdQBuAHQAIAA9ACAAJABzAHQAcgBnAF8AcABvAG8AbABfAGMAcgBpAHQAXwByAGUAcwAuAEwAZQBuAGcAdABoACAAKwAgACQAcwB0AHIAZwBfAHAAbwBvAGwAXwB3AGEAcgBuAF8AcgBlAHMALgBMAGUAbgBnAHQAaAANAAoAIAAgACAAIAAgACAAIAAgACQAdQBuAGgAZQBhAGwAdABoAHkAXwBwAG8AbwBsAHMAIAA9ACAAQAAoACkADQAKACAAIAAgACAAIAAgACAAIAAkAHMAdAByAGcAXwBwAG8AbwBsAF8AYwByAGkAdABfAHIAZQBzACAAfAAgAEYAbwByAEUAYQBjAGgALQBPAGIAagBlAGMAdAB7ACAAJAB1AG4AaABlAGEAbAB0AGgAeQBfAHAAbwBvAGwAcwAgACsAPQAgACIAJAAoACQAXwAuAEYAcgBpAGUAbgBkAGwAeQBOAGEAbQBlACkAIAAoACQAKAAkAF8ALgBIAGUAYQBsAHQAaABTAHQAYQB0AHUAcwApACkAIgAgAH0ADQAKACAAIAAgACAAIAAgACAAIAAkAHMAdAByAGcAXwBwAG8AbwBsAF8AdwBhAHIAbgBfAHIAZQBzACAAfAAgAEYAbwByAEUAYQBjAGgALQBPAGIAagBlAGMAdAB7ACAAJAB1AG4AaABlAGEAbAB0AGgAeQBfAHAAbwBvAGwAcwAgACsAPQAgACIAJAAoACQAXwAuAEYAcgBpAGUAbgBkAGwAeQBOAGEAbQBlACkAIAAoACQAKAAkAF8ALgBIAGUAYQBsAHQAaABTAHQAYQB0AHUAcwApACkAIgAgAH0ADQAKACAAIAAgACAAIAAgACAAIABpAGYAKAAkAHUAbgBoAGUAYQBsAHQAaAB5AF8AcABvAG8AbABzAC4ATABlAG4AZwB0AGgAIAAtAGcAdAAgADAAKQB7AA0ACgAgACAAIAAgACAAIAAgACAAIAAgACAAIAAkAHMAdAByAGcAXwBwAG8AbwBsAF8AaABlAGEAbAB0AGgAIAA9ACAAJAB1AG4AaABlAGEAbAB0AGgAeQBfAHAAbwBvAGwAcwAgAC0AagBvAGkAbgAgACIALAAiAA0ACgAgACAAIAAgACAAIAAgACAAfQANAAoAIAAgACAAIAB9AA0ACgB9AGMAYQB0AGMAaAB7AA0ACgAJAFcAcgBpAHQAZQAtAEUAcgByAG8AcgAgACQAKAAkAEUAcgByAG8AcgBbADAAXQApADsADQAKAAkAZQB4AGkAdAAgADEAOwANAAoAfQA=">
+          <p:RunPowerShellScript.InArgs>
+            <scg:Dictionary x:TypeArguments="x:String, p:InArg" />
+          </p:RunPowerShellScript.InArgs>
+          <p:RunPowerShellScript.OutArgs>
+            <p:OutArg x:Key="strg_pool_count" ArgType="number" DisplayName="Storage Pool Count" Name="strg_pool_count">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:Double">[RunPowerShellScript_strg_pool_count]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="strg_pool_names" ArgType="string" DisplayName="Storage Pool Names" Name="strg_pool_names">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_strg_pool_names]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="strg_pool_health" ArgType="string" DisplayName="Storage Pool Health" Name="strg_pool_health">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_strg_pool_health]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="strg_pool_unhealthy_count" ArgType="number" DisplayName="Storage Pool Unhealthy Count" Name="strg_pool_unhealthy_count">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:Double">[RunPowerShellScript_strg_pool_unhealthy_count]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+          </p:RunPowerShellScript.OutArgs>
+        </p:RunPowerShellScript>
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_OutPut_64" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_ResultString" />
+        <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="RunPowerShellScript_Results_x64" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_Result" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_strg_pool_count" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_strg_pool_names" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_strg_pool_health" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_strg_pool_unhealthy_count" />
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>

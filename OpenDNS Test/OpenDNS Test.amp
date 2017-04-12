@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="a37d29c3-7c5c-4f0c-9214-18c8de64d38a" Name="OpenDNS Test" Description="UGVyZm9ybXMgY29udGVudCBhbmQgc3RhdHVzIHRlc3RpbmcgYmFzZWQgb24gdGhlIHJlY29tbWVuZGF0aW9ucyBvZiBPcGVuRE5TIChodHRwczovL3N1cHBvcnQudW1icmVsbGEuY29tL2hjL2VuLXVzL2FydGljbGVzLzIzMDkwMzcyOC1Ib3ctVG8tU3VjY2Vzc2Z1bGx5LXRlc3QtdG8tZW5zdXJlLXlvdS1yZS1ydW5uaW5nLVVtYnJlbGxhLWNvcnJlY3RseSk=" Version="2.1.2.19" RemoteCategory="0" ExecutionType="Local" PS3ObjectCount="0">
+  <Object ID="{a634d768-65bb-4b7d-b10d-638b4c549cd5}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml&gt;&lt;Parameters&gt;&lt;Parameter ParameterName=&quot;opendns_test_url&quot; Label=&quot;OpenDNS Test URL&quot; ParameterType=&quot;string&quot; Value=&quot;http://welcome.opendns.com&quot; /&gt;&lt;Parameter ParameterName=&quot;opendns_match&quot; Label=&quot;OpenDNS Content Match (Regex)&quot; ParameterType=&quot;string&quot; Value=&quot;.*Welcome to OpenDNS!.*&quot; /&gt;&lt;Parameter ParameterName=&quot;internetbadguys_test_url&quot; Label=&quot;Internet Bad Guys Test URL&quot; ParameterType=&quot;string&quot; Value=&quot;http://www.internetbadguys.com&quot; /&gt;&lt;Parameter ParameterName=&quot;examplemalware_test_url&quot; Label=&quot;Example Malware Test URL&quot; ParameterType=&quot;string&quot; Value=&quot;http://www.examplemalwaredomain.com&quot; /&gt;&lt;Parameter ParameterName=&quot;examplebotnet_test_url&quot; Label=&quot;Example Botnet Test URL&quot; ParameterType=&quot;string&quot; Value=&quot;http://www.examplebotnetdomain.com&quot; /&gt;&lt;/Parameters&gt;&lt;OutputParameters&gt;&lt;Parameter ParameterName=&quot;status&quot; Label=&quot;Status&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.Status&quot; /&gt;&lt;Parameter ParameterName=&quot;statusInt&quot; Label=&quot;Status Code&quot; ParameterType=&quot;number&quot; Value=&quot;Run PowerShell Script.Status Code&quot; /&gt;&lt;Parameter ParameterName=&quot;opendnsTestUrl&quot; Label=&quot;OpenDNS Test URL&quot; ParameterType=&quot;string&quot; Value=&quot;Input Parameters.OpenDNS Test URL&quot; /&gt;&lt;Parameter ParameterName=&quot;opendnsStatus&quot; Label=&quot;OpenDNS Test Working?&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.OpenDNS Working?&quot; /&gt;&lt;Parameter ParameterName=&quot;internetbadguysTestUrl&quot; Label=&quot;Internet Bad Guys Test URL&quot; ParameterType=&quot;string&quot; Value=&quot;Input Parameters.Internet Bad Guys Test URL&quot; /&gt;&lt;Parameter ParameterName=&quot;internetbadguysStatus&quot; Label=&quot;Internet Bad Guys Test Working?&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.Internet Bad Guys Working?&quot; /&gt;&lt;Parameter ParameterName=&quot;examplemalwareTestUrl&quot; Label=&quot;Example Malware Test URL&quot; ParameterType=&quot;string&quot; Value=&quot;Input Parameters.Example Malware Test URL&quot; /&gt;&lt;Parameter ParameterName=&quot;examplemalwareStatus&quot; Label=&quot;Example Malware Test Working?&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.Example Malware Working?&quot; /&gt;&lt;Parameter ParameterName=&quot;examplebotnetTestUrl&quot; Label=&quot;Example Botnet Test URL&quot; ParameterType=&quot;string&quot; Value=&quot;Input Parameters.Example Botnet Test URL&quot; /&gt;&lt;Parameter ParameterName=&quot;examplebotnetStatus&quot; Label=&quot;Example Botnet Test Working?&quot; ParameterType=&quot;string&quot; Value=&quot;Run PowerShell Script.Example Botnet Working?&quot; /&gt;&lt;/OutputParameters&gt;&lt;/xml&gt;" />
+  <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
+    <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>d37fd668-eed1-4df1-847d-2e0897b6e46a.status</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>status</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>d37fd668-eed1-4df1-847d-2e0897b6e46a.status_int</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>statusInt</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>InputParameter.opendns_test_url</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>opendnsTestUrl</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>d37fd668-eed1-4df1-847d-2e0897b6e46a.opendns_status</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>opendnsStatus</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>InputParameter.internetbadguys_test_url</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>internetbadguysTestUrl</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>d37fd668-eed1-4df1-847d-2e0897b6e46a.internetbadguys_status</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>internetbadguysStatus</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>InputParameter.examplemalware_test_url</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>examplemalwareTestUrl</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>d37fd668-eed1-4df1-847d-2e0897b6e46a.examplemalware_status</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>examplemalwareStatus</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>InputParameter.examplebotnet_test_url</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>examplebotnetTestUrl</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+      <d2p1:TupleOfstringstringstringstring>
+        <d2p1:m_Item1>d37fd668-eed1-4df1-847d-2e0897b6e46a.examplebotnet_status</d2p1:m_Item1>
+        <d2p1:m_Item2>OutputObject</d2p1:m_Item2>
+        <d2p1:m_Item3></d2p1:m_Item3>
+        <d2p1:m_Item4>examplebotnetStatus</d2p1:m_Item4>
+      </d2p1:TupleOfstringstringstringstring>
+    </hashset>
+  </LinkManager>
+  <Activity mc:Ignorable="sap sads" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <x:Members>
+      <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
+    </x:Members>
+    <sap:VirtualizedContainerService.HintSize>490,571</sap:VirtualizedContainerService.HintSize>
+    <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
+    <p:PolicySequence DisplayName="Policy Builder" sap:VirtualizedContainerService.HintSize="490,571" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <p:PolicySequence.Activities>
+        <p:RunPowerShellScript AssemblyName="PolicyExecutionEngine, Version=2.1.2.19, Culture=neutral, PublicKeyToken=null" DisplayName="Run PowerShell Script" sap:VirtualizedContainerService.HintSize="454,348" Moniker="d37fd668-eed1-4df1-847d-2e0897b6e46a" OutPut_64="[RunPowerShellScript_OutPut_64]" Result="[RunPowerShellScript_Result]" ResultString="[RunPowerShellScript_ResultString]" Results_x64="[RunPowerShellScript_Results_x64]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="RunPowerShellScript" genArgEvent="65a41a04-879a-4a73-a75d-23bc444d4835" m_bTextLinkChange="False" script="DQAKACQAaQBuAHQAZQByAG4AZQB0AGIAYQBkAGcAdQB5AHMAXwB0AGUAcwB0AF8AdQByAGwAIAA9ACAAIgBoAHQAdABwADoALwAvAHcAdwB3AC4AaQBuAHQAZQByAG4AZQB0AGIAYQBkAGcAdQB5AHMALgBjAG8AbQAiAA0ACgAkAGUAeABhAG0AcABsAGUAbQBhAGwAdwBhAHIAZQBfAHQAZQBzAHQAXwB1AHIAbAAgAD0AIAAiAGgAdAB0AHAAOgAvAC8AdwB3AHcALgBlAHgAYQBtAHAAbABlAG0AYQBsAHcAYQByAGUAZABvAG0AYQBpAG4ALgBjAG8AbQAiAA0ACgAkAGUAeABhAG0AcABsAGUAYgBvAHQAbgBlAHQAXwB0AGUAcwB0AF8AdQByAGwAIAA9ACAAIgBoAHQAdABwADoALwAvAHcAdwB3AC4AZQB4AGEAbQBwAGwAZQBiAG8AdABuAGUAdABkAG8AbQBhAGkAbgAuAGMAbwBtACIADQAKAA0ACgB0AHIAeQAgAHsADQAKACAAIAAgACAAJABvAHAAZQBuAGQAbgBzACAAPQAgAEkAbgB2AG8AawBlAC0AVwBlAGIAUgBlAHEAdQBlAHMAdAAgACQAbwBwAGUAbgBkAG4AcwBfAHQAZQBzAHQAXwB1AHIAbAAgAC0ARABpAHMAYQBiAGwAZQBLAGUAZQBwAEEAbABpAHYAZQAgAC0AVQBzAGUAQgBhAHMAaQBjAFAAYQByAHMAaQBuAGcAIAAtAE0AZQB0AGgAbwBkACAARwBlAHQAIAAtAEUAcgByAG8AcgBBAGMAdABpAG8AbgAgAFMAaQBsAGUAbgB0AGwAeQBDAG8AbgB0AGkAbgB1AGUADQAKACAAIAAgACAAJABvAHAAZQBuAGQAbgBzAF8AcwB0AGEAdAB1AHMAIAA9ACAAJABvAHAAZQBuAGQAbgBzAC4AQwBvAG4AdABlAG4AdAAgAC0AbQBhAHQAYwBoACAAJABvAHAAZQBuAGQAbgBzAF8AbQBhAHQAYwBoAA0ACgB9ACAAYwBhAHQAYwBoACAAewANAAoAIAAgACAAIAAkAG8AcABlAG4AZABuAHMAXwBzAHQAYQB0AHUAcwAgAD0AIAAkAGYAYQBsAHMAZQANAAoAfQANAAoADQAKAHQAcgB5ACAAewANAAoAIAAgACAAIAAkAGkAbgB0AGUAcgBuAGUAdABiAGEAZABnAHUAeQBzACAAPQAgAEkAbgB2AG8AawBlAC0AVwBlAGIAUgBlAHEAdQBlAHMAdAAgACQAaQBuAHQAZQByAG4AZQB0AGIAYQBkAGcAdQB5AHMAXwB0AGUAcwB0AF8AdQByAGwAIAAtAEQAaQBzAGEAYgBsAGUASwBlAGUAcABBAGwAaQB2AGUAIAAtAFUAcwBlAEIAYQBzAGkAYwBQAGEAcgBzAGkAbgBnACAALQBNAGUAdABoAG8AZAAgAEcAZQB0ACAALQBFAHIAcgBvAHIAQQBjAHQAaQBvAG4AIABTAGkAbABlAG4AdABsAHkAQwBvAG4AdABpAG4AdQBlAA0ACgAgACAAIAAgACQAaQBuAHQAZQByAG4AZQB0AGIAYQBkAGcAdQB5AHMAXwBzAHQAYQB0AHUAcwAgAD0AIAAkAGYAYQBsAHMAZQANAAoAfQAgAGMAYQB0AGMAaAAgAHsADQAKACAAIAAgACAAJABpAG4AdABlAHIAbgBlAHQAYgBhAGQAZwB1AHkAcwBfAHMAdABhAHQAdQBzACAAPQAgACQAXwAuAEUAeABjAGUAcAB0AGkAbwBuAC4AUgBlAHMAcABvAG4AcwBlAC4AUwB0AGEAdAB1AHMARABlAHMAYwByAGkAcAB0AGkAbwBuACAALQBlAHEAIAAiAEYAbwByAGIAaQBkAGQAZQBuACIADQAKAH0ADQAKAA0ACgB0AHIAeQAgAHsADQAKACAAIAAgACAAJABlAHgAYQBtAHAAbABlAG0AYQBsAHcAYQByAGUAIAA9ACAASQBuAHYAbwBrAGUALQBXAGUAYgBSAGUAcQB1AGUAcwB0ACAAJABlAHgAYQBtAHAAbABlAG0AYQBsAHcAYQByAGUAXwB0AGUAcwB0AF8AdQByAGwAIAAtAEQAaQBzAGEAYgBsAGUASwBlAGUAcABBAGwAaQB2AGUAIAAtAFUAcwBlAEIAYQBzAGkAYwBQAGEAcgBzAGkAbgBnACAALQBNAGUAdABoAG8AZAAgAEcAZQB0ACAALQBFAHIAcgBvAHIAQQBjAHQAaQBvAG4AIABTAGkAbABlAG4AdABsAHkAQwBvAG4AdABpAG4AdQBlAA0ACgAgACAAIAAgACQAZQB4AGEAbQBwAGwAZQBtAGEAbAB3AGEAcgBlAF8AcwB0AGEAdAB1AHMAIAA9ACAAJABmAGEAbABzAGUADQAKAH0AIABjAGEAdABjAGgAIAB7AA0ACgAgACAAIAAgACQAZQB4AGEAbQBwAGwAZQBtAGEAbAB3AGEAcgBlAF8AcwB0AGEAdAB1AHMAIAA9ACAAJABfAC4ARQB4AGMAZQBwAHQAaQBvAG4ALgBSAGUAcwBwAG8AbgBzAGUALgBTAHQAYQB0AHUAcwBEAGUAcwBjAHIAaQBwAHQAaQBvAG4AIAAtAGUAcQAgACIARgBvAHIAYgBpAGQAZABlAG4AIgANAAoAfQANAAoADQAKAHQAcgB5ACAAewANAAoAIAAgACAAIAAkAGUAeABhAG0AcABsAGUAYgBvAHQAbgBlAHQAIAA9ACAASQBuAHYAbwBrAGUALQBXAGUAYgBSAGUAcQB1AGUAcwB0ACAAJABlAHgAYQBtAHAAbABlAGIAbwB0AG4AZQB0AF8AdABlAHMAdABfAHUAcgBsACAALQBEAGkAcwBhAGIAbABlAEsAZQBlAHAAQQBsAGkAdgBlACAALQBVAHMAZQBCAGEAcwBpAGMAUABhAHIAcwBpAG4AZwAgAC0ATQBlAHQAaABvAGQAIABHAGUAdAAgAC0ARQByAHIAbwByAEEAYwB0AGkAbwBuACAAUwBpAGwAZQBuAHQAbAB5AEMAbwBuAHQAaQBuAHUAZQANAAoAIAAgACAAIAAkAGUAeABhAG0AcABsAGUAYgBvAHQAbgBlAHQAXwBzAHQAYQB0AHUAcwAgAD0AIAAkAGYAYQBsAHMAZQANAAoAfQAgAGMAYQB0AGMAaAAgAHsADQAKACAAIAAgACAAJABlAHgAYQBtAHAAbABlAGIAbwB0AG4AZQB0AF8AcwB0AGEAdAB1AHMAIAA9ACAAJABfAC4ARQB4AGMAZQBwAHQAaQBvAG4ALgBSAGUAcwBwAG8AbgBzAGUALgBTAHQAYQB0AHUAcwBEAGUAcwBjAHIAaQBwAHQAaQBvAG4AIAAtAGUAcQAgACIARgBvAHIAYgBpAGQAZABlAG4AIgANAAoAfQANAAoADQAKACQAcwB0AGEAdAB1AHMAIAA9ACAAIgBPAHAAZQBuAEQATgBTACAAdwBvAHIAawBpAG4AZwAiAA0ACgANAAoAIwAgADAAIAA9ACAASABlAGEAbAB0AGgAeQAsACAAMQAgAD0AIABXAGEAcgBuAGkAbgBnACwAIAAyACAAPQAgAEMAcgBpAHQAaQBjAGEAbAANAAoAJABzAHQAYQB0AHUAcwBfAGkAbgB0ACAAPQAgADAADQAKACQAcwB0AGEAdAB1AHMAXwBmAGEAaQBsAHUAcgBlAHMAIAA9ACAAQAAoACkADQAKAGkAZgAoACAALQBOAG8AdAAgACgAJABpAG4AdABlAHIAbgBlAHQAYgBhAGQAZwB1AHkAcwBfAHMAdABhAHQAdQBzACkAIAApACAAewANAAoAIAAgACAAIAAkAHMAdABhAHQAdQBzAF8AaQBuAHQAIAA9ACAAMQANAAoAIAAgACAAIAAkAHMAdABhAHQAdQBzAF8AZgBhAGkAbAB1AHIAZQBzACAAKwA9ACAAIgBJAG4AdABlAHIAbgBlAHQAIABCAGEAZAAgAEcAdQB5AHMAIgANAAoAfQANAAoAaQBmACgAIAAtAE4AbwB0ACAAKAAkAGUAeABhAG0AcABsAGUAbQBhAGwAdwBhAHIAZQBfAHMAdABhAHQAdQBzACkAIAApACAAewANAAoAIAAgACAAIAAkAHMAdABhAHQAdQBzAF8AaQBuAHQAIAA9ACAAMQANAAoAIAAgACAAIAAkAHMAdABhAHQAdQBzAF8AZgBhAGkAbAB1AHIAZQBzACAAKwA9ACAAIgBNAGEAbAB3AGEAcgBlACIADQAKAH0ADQAKAGkAZgAoACAALQBOAG8AdAAgACgAJABlAHgAYQBtAHAAbABlAGIAbwB0AG4AZQB0AF8AcwB0AGEAdAB1AHMAKQAgACkAIAB7AA0ACgAgACAAIAAgACQAcwB0AGEAdAB1AHMAXwBpAG4AdAAgAD0AIAAxAA0ACgAgACAAIAAgACQAcwB0AGEAdAB1AHMAXwBmAGEAaQBsAHUAcgBlAHMAIAArAD0AIAAiAEIAbwB0AG4AZQB0ACIADQAKAH0ADQAKAGkAZgAoACAALQBOAG8AdAAgACgAJABvAHAAZQBuAGQAbgBzAF8AcwB0AGEAdAB1AHMAKQAgACkAIAB7AA0ACgAgACAAIAAgACQAcwB0AGEAdAB1AHMAXwBpAG4AdAAgAD0AIAAyAA0ACgAgACAAIAAgACQAcwB0AGEAdAB1AHMAXwBmAGEAaQBsAHUAcgBlAHMAIAArAD0AIAAiAE8AcABlAG4ARABOAFMAIgANAAoAfQANAAoADQAKAGkAZgAoACAALQBOAG8AdAAgACgAJABzAHQAYQB0AHUAcwBfAGkAbgB0ACAALQBlAHEAIAAwACkAIAApACAAewANAAoAIAAgACAAIAAkAHMAdABhAHQAdQBzACAAPQAgACQAcwB0AGEAdAB1AHMAXwBmAGEAaQBsAHUAcgBlAHMAIAAtAGoAbwBpAG4AIAAiACwAIAAiAA0ACgB9AA==">
+          <p:RunPowerShellScript.InArgs>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="opendns_test_url" ArgType="string" DisplayArg="Input Parameters.OpenDNS Test URL" DisplayName="OpenDNS Test URL" Name="opendns_test_url" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:String">[opendns_test_url]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="opendns_match" ArgType="string" DisplayArg="Input Parameters.OpenDNS Content Match (Regex)" DisplayName="OpenDNS Content Match (Regex)" Name="opendns_match" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:String">[opendns_match]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="internetbadguys_test_url" ArgType="string" DisplayArg="Input Parameters.Internet Bad Guys Test URL" DisplayName="Internet Bad Guys Test URL" Name="internetbadguys_test_url" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:String">[internetbadguys_test_url]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="examplemalware_test_url" ArgType="string" DisplayArg="Input Parameters.Example Malware Test URL" DisplayName="Example Malware Test URL" Name="examplemalware_test_url" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:String">[examplemalware_test_url]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+            <p:InArg Item="{x:Null}" ItemProp="{x:Null}" x:Key="examplebotnet_test_url" ArgType="string" DisplayArg="Input Parameters.Example Botnet Test URL" DisplayName="Example Botnet Test URL" Name="examplebotnet_test_url" isRequired="False">
+              <p:InArg.Arg>
+                <InArgument x:TypeArguments="x:String">[examplebotnet_test_url]</InArgument>
+              </p:InArg.Arg>
+            </p:InArg>
+          </p:RunPowerShellScript.InArgs>
+          <p:RunPowerShellScript.OutArgs>
+            <p:OutArg x:Key="status" ArgType="string" DisplayName="Status" Name="status">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_status]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="status_int" ArgType="number" DisplayName="Status Code" Name="status_int">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:Double">[RunPowerShellScript_status_int]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="opendns_status" ArgType="string" DisplayName="OpenDNS Working?" Name="opendns_status">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_opendns_status]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="internetbadguys_status" ArgType="string" DisplayName="Internet Bad Guys Working?" Name="internetbadguys_status">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_internetbadguys_status]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="examplemalware_status" ArgType="string" DisplayName="Example Malware Working?" Name="examplemalware_status">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_examplemalware_status]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+            <p:OutArg x:Key="examplebotnet_status" ArgType="string" DisplayName="Example Botnet Working?" Name="examplebotnet_status">
+              <p:OutArg.Arg>
+                <OutArgument x:TypeArguments="x:String">[RunPowerShellScript_examplebotnet_status]</OutArgument>
+              </p:OutArg.Arg>
+            </p:OutArg>
+          </p:RunPowerShellScript.OutArgs>
+        </p:RunPowerShellScript>
+      </p:PolicySequence.Activities>
+      <p:PolicySequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_OutPut_64" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_ResultString" />
+        <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="RunPowerShellScript_Results_x64" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_Result" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_status" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_opendns_status" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_internetbadguys_status" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_examplemalware_status" />
+        <Variable x:TypeArguments="x:String" Name="RunPowerShellScript_examplebotnet_status" />
+        <Variable x:TypeArguments="x:Double" Name="RunPowerShellScript_status_int" />
+        <Variable x:TypeArguments="x:String" Default="http://welcome.opendns.com" Name="opendns_test_url" />
+        <Variable x:TypeArguments="x:String" Default=".*Welcome to OpenDNS!.*" Name="opendns_match" />
+        <Variable x:TypeArguments="x:String" Default="http://www.internetbadguys.com" Name="internetbadguys_test_url" />
+        <Variable x:TypeArguments="x:String" Default="http://www.examplemalwaredomain.com" Name="examplemalware_test_url" />
+        <Variable x:TypeArguments="x:String" Default="http://www.examplebotnetdomain.com" Name="examplebotnet_test_url" />
+      </p:PolicySequence.Variables>
+    </p:PolicySequence>
+  </Activity>
+</Policy>
